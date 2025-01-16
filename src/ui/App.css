@@ -1,0 +1,289 @@
+/* ++====================================================
+   || Page Colors
+   ++====================================================
+   || Header Background: #191F2B
+   || Primary Background: #282c34
+   || Secondary Background: #464D59
+   || Tertiary Background: #626977
+*/
+
+/* ++====================================================
+   || Overall Page
+   ++====================================================
+*/
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.App {
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
+  min-width: 768px;
+}
+
+.App-btn-icon {
+  cursor: pointer;
+  color: #A8ABB1;
+  font-size: 20px;
+  stroke-width: 0.6px;
+}
+
+.App-btn-icon:hover {
+  color: #808690;
+}
+
+.App-switch {
+  margin-top: 1vh;
+  margin-left: 1vh;
+}
+
+.App-internal-window-background {
+  margin: 0;
+  padding: 0;
+  position: absolute;          /* Ensure it covers the full screen */
+  top: 0;
+  left: 0;
+  width: 752px;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+  z-index: 1400;            /* Ensure it's above other elements */
+}
+
+.App-internal-window {
+  margin-left: 1vh;
+  margin-right: 1vh;
+  width: calc(100% - 2vh);
+  min-height: 65vh;
+  border-radius: calc(10px + 1vmin);
+  background-color: #282c34;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;  /* Ensure the button is positioned relative to this container */
+}
+
+/* ++====================================================
+   || Header Row
+   ++====================================================
+*/
+.App-header {
+  background-color: #191F2B;
+  min-height: 10vh;
+  max-height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: calc(8px + 1vmin);
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.App-logo {
+  max-height: calc(16px + 6vh);
+  max-width: calc(16px + 6vh);
+  min-width: 48px;
+  min-height: 48px;
+  padding: calc(8px + 1vmin);
+}
+
+.App-title {
+  flex: 1;
+}
+
+#App-header-btn {
+  padding: 0;
+  margin-right: 6vh;
+}
+
+/* ++====================================================
+   || Page Contents after Header
+   ++====================================================
+*/
+.App-content {
+  position: relative;
+  height: 100%;
+  width: 735px;
+}
+
+/* ++====================================================
+   || List of Scripts
+   ++====================================================
+*/
+.App-scripts {
+  padding-bottom: 1vh;
+  text-align: left;  
+}
+
+/* ++====================================================
+   || Script Item
+   ++====================================================
+*/
+.App-script-item {
+  max-width: 732px;
+  margin: 1vh;
+  border-radius: calc(10px + 1vmin);
+  background-color: #464D59;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.App-script-item:hover {
+  background-color: #5F6773;
+  cursor: pointer;
+}
+
+.App-script-item-title {
+  margin: 0;
+  padding-top: 0.75vmin;
+  padding-bottom: 0.5vmin;
+  padding-left: 1.5vmin;
+  font-weight: bold;
+  font-size: calc(8px + 1vmin);
+}
+
+.App-script-item-hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0.5em;
+  margin-right: 1em;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #626977;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.App-script-item-desc {
+  margin: 0;
+  padding-top: 0.5vmin;
+  padding-bottom: 2vmin;
+  padding-left: 2vmin;
+  flex-direction: row;
+  color: #A8ABB1;
+  font-size: calc(8px + 1vmin);
+}
+
+/* ++====================================================
+   || Script Item Metadata
+   ++====================================================
+*/
+.App-script-item-md {
+  padding: 0;
+  margin-top: 0.75vmin;
+  margin-bottom: 0.5vmin;
+  margin-left: 2vmin;
+  color: #A8ABB1;
+  font-size: calc(8px + 1vmin);
+  display: flex;                /* Make the div a flex container */
+  flex-direction: column;       /* Stack the inputs vertically */
+  align-items: flex-start;      /* Keep inputs aligned to the left */
+  position: relative;           /* Allow absolute positioning for the button */
+
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.App-script-item-md-param-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.App-script-item-md-param {
+  padding: 3px;
+  margin-top: 0.75vmin;
+  margin-bottom: 0.5vmin;
+  margin-right: 1.5vmin;
+  border-radius: 8px;
+  border: none;
+  font-size: calc(6px + 1vmin);
+}
+
+#App-script-item-md-btn-run {
+  position: absolute;           /* Position the button absolutely */
+  bottom: 1vh;                    /* Place the button 10px from the top */
+  right: calc(2vh + 25px);                  /* Place the button 10px from the right */
+}
+
+#App-script-item-md-btn-minimize {
+  position: absolute;           /* Position the button absolutely */
+  bottom: 1vh;                    /* Place the button 10px from the top */
+  right: 2vh;                  /* Place the button 10px from the right */
+}
+
+/* ++====================================================
+   || Script Console
+   ++====================================================
+*/
+.App-script-console-window-output {
+  position: relative;
+  top: 2vh;
+  margin: 2vh;            /* Space around the output to simulate the 'border' effect */
+  padding: 0;             /* No internal padding, the margin will act as the gap */
+  max-height: calc(65vh - 4vh - 20px - 2vh);
+  overflow-y: hidden;
+  flex-grow: 1;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #A8ABB1;
+  background-color: #464D59;
+  border-radius: calc(10px + 1vmin); /* Optional: if you want rounded corners on the output */
+  box-sizing: border-box;  /* Ensure the total size includes the margin */
+}
+
+.App-script-console-window-output pre {
+  margin: 1vh;
+}
+
+.App-script-console-error {
+  color: #f44336;
+}
+
+#App-script-console-btn-minimize {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* ++====================================================
+   || App Settings
+   ++====================================================
+*/
+.App-settings-item {
+  position: relative;
+  top: 2vh;
+  margin: 2vh;            /* Space around the output to simulate the 'border' effect */
+  padding: 0;             /* No internal padding, the margin will act as the gap */
+  color: #A8ABB1;
+  background-color: #464D59;
+  border-radius: calc(10px + 1vmin); /* Optional: if you want rounded corners on the output */
+  box-sizing: border-box;  /* Ensure the total size includes the margin */
+}
+
+.App-settings-item-title {
+  margin: 0;
+  padding-top: 0.75vmin;
+  padding-bottom: 0.5vmin;
+  padding-left: 1.5vmin;
+  font-weight: bold;
+  font-size: calc(8px + 1vmin);
+}
+
+#App-settings-btn-minimize {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.App-settings-textfield {
+  padding: 3px;
+  margin-top: 0.75vmin;
+  margin-bottom: 0.5vmin;
+  margin-right: 1.5vmin;
+  margin-left: 1.5vmin;
+  min-width: 85vw;
+  max-width: 85vw;
+  border-radius: 8px;
+  border: none;
+}
+
+#github-repos {
+  height: calc((8px + 1.4vmin) * 3);
+}

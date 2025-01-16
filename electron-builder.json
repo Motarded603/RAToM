@@ -1,0 +1,21 @@
+{
+  "appId": "com.jcd603.ratom",
+  "productName": "RAToM",
+  "buildVersion": "0.1.2",
+  "files": [
+    "dist-react",
+    "src/electron"
+  ],
+  "extraResources": [
+    "src/electron/preload.js",
+    "src/assets/**"
+  ],
+  "icon": "ratom.ico",
+  "win": {
+    "artifactName": "RAToM-${buildVersion}.${ext}",
+    "target": [
+      "portable",
+      "msi"
+    ]
+  }
+}
